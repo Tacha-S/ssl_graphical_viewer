@@ -1,0 +1,23 @@
+{
+  "name": "ssl_graphical_viewer",
+  "version": "0.0.0",
+  "description": "for robocup ssl",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tacha-S/ssl_graphical_viewer.git"
+  },
+  "keywords": ["Robocup", "SSL"],
+  "author": "Tatsuroh Sakaguchi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tacha-S/ssl_graphical_viewer/issues"
+  },
+  "homepage": "https://github.com/Tacha-S/ssl_graphical_viewer#readme",
+  "dependencies": {
+    "protobufjs": "^5.0.1"
+  }
+}
