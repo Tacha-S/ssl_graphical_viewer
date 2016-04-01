@@ -21,30 +21,30 @@ if(canvas.getContext){
   ctx = canvas.getContext('2d');
 }
 
-canvas.height = 800;//$("#field").height();
-canvas.width = 1200;//$("#field").width();
+canvas.height = 800;
+canvas.width = 1250;
 
 //read vision config
-var network_config = JSON.parse(fs.readFileSync(__dirname + "/configs/network.json", "utf-8"));
-var PORT = network_config.port_num;
+var vision_config = JSON.parse(fs.readFileSync(__dirname + "/configs/network.json", "utf-8"));
+var PORT = vision_config.vision_port_num;
 
-var client = dgram.createSocket('udp4');
+var vision_client = dgram.createSocket('udp4');
 
 //ready to recieve multicast message
-client.on('listening', function() {
-  var address = client.address();
-  client.setBroadcast(true);
-  client.setMulticastTTL(128);
-  client.addMembership(network_config.multicast_address);
+vision_client.on('listening', function() {
+  var address = vision_client.address();
+  vision_client.setBroadcast(true);
+  vision_client.setMulticastTTL(128);
+  vision_client.addMembership(vision_config.vision_multicast_address);
 })
 
 //analyze protobuf
-var builder = protobuf.loadProtoFile(__dirname + "/proto/messages_robocup_ssl_wrapper.proto");
-var packet_data = builder.build("SSL_WrapperPacket");
+var vision_builder = protobuf.loadProtoFile(__dirname + "/proto/messages_robocup_ssl_wrapper.proto");
+var vision_data = vision_builder.build("SSL_WrapperPacket");
 
 //recieve a message
-client.on('message', function(message, remote){
-  var packet = packet_data.decode(message);
+vision_client.on('message', function(message, remote){
+  var packet = vision_data.decode(message);
   //save geometry info.
   if(packet.geometry != null){
     var geometry = {
@@ -67,7 +67,7 @@ client.on('message', function(message, remote){
 
 
 //binding port num.
-client.bind(PORT);
+vision_client.bind(PORT);
 
 
 function draw(detection){

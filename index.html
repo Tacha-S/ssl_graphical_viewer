@@ -3,10 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <title>SSL graphical viewer</title>
+  <link href="css/viewer.css" rel="stylesheet">
 </head>
 
 <body>
-  <canvas id="field" width="1200" height="800"></canvas>
-  <script src="vision.js"></script>
+  <div class="container">
+    <div class="row" align="center">
+      <span id="stage" class="label label-default state-name"></span>
+      <span id="command" class="label label-default state-name"></span>
+      <span id="time" class="label label-default state-name"></span>
+    </div>
+    <div class="row" align="center">
+      <span id="blue" class="label label-blue team-name"></span>
+      <span id="blue_score" class="label label-blue score-name"></span>
+      <span id="center_bar" class="label score-name">−</span>
+      <span id="yellow_score" class="label label-yellow score-name"></span>
+      <span id="yellow" class="label label-yellow team-name"></span>
+    </div>
+    <div class="row" align="center">
+      <canvas id="field" width="1250" height="800"></canvas>
+    </div>
+  </div>
+  <script src="./referee.js"></script>
+  <script src="./vision.js"></script>
 </body>
 </html>
