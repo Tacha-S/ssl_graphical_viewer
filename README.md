@@ -14,8 +14,24 @@ if u need run on the server and web viewer
 
 ## Download
 
-app downloads
+app downloads  
 
+- [Linux(x64)](https://github.com/Tacha-S/ssl_graphical_viewer/releases/download/v1.0.0/ssl_graphical_viewer-linux-x64.zip)
+- [Mac(x64)](https://github.com/Tacha-S/ssl_graphical_viewer/releases/download/v1.0.0/ssl_graphical_viewer-darwin-x64.zip)
+- [Windows(x64)](https://github.com/Tacha-S/ssl_graphical_viewer/releases/download/v1.0.0/ssl_graphical_viewer-win32-x64.zip)
+
+## Manual Instalation
+
+you need install nodejs and npm and electron.
+
+after installed it
+
+```bash
+git clone https://github.com/Tacha-S/ssl_graphical_viewer.git
+cd ssl_graphical_viewer
+npm install
+npm start
+```
 
 ## LICENSE
 
