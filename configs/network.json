@@ -1,4 +1,6 @@
 {
-  "multicast_address": "224.5.23.2",
-  "port_num": 10020
+  "vision_multicast_address": "224.5.23.2",
+  "vision_port_num": 10020,
+  "referee_multicast_address": "224.5.23.1",
+  "referee_port_num": 10003
 }
