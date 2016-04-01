@@ -4,7 +4,7 @@ for robocup ssl
 SSL-Vision or grSim... if you use official packet sending software,
 this app enable recieve and view.  
 
-![Screenshot](screen_shot.png)
+![Screenshot](Screenshot.png)
 
 this app using electron.  
 so run standalone and cross platform.
