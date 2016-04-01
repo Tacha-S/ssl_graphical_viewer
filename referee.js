@@ -61,7 +61,11 @@ referee_client.on('message', function(message, remote){
   var packet = referee_data.decode(message);
   document.getElementById('stage').innerHTML = stages[packet.stage];
   document.getElementById('command').innerHTML = commands[packet.command];
-  document.getElementById('time').innerHTML = parseInt(packet.stage_time_left/60000000) + ":" + parseInt(packet.stage_time_left/10000000);
+  var sec = parseInt((packet.stage_time_left/1000000)%60);
+  if(sec < 10)
+    document.getElementById('time').innerHTML = parseInt(packet.stage_time_left/60000000) + ":0" + sec;
+  else
+    document.getElementById('time').innerHTML = parseInt(packet.stage_time_left/60000000) + ":" + sec;
   document.getElementById('blue').innerHTML = packet.blue.name;
   document.getElementById('blue_score').innerHTML = packet.blue.score;
   document.getElementById('yellow').innerHTML = packet.yellow.name;
