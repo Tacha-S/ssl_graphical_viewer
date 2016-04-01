@@ -1,0 +1,41 @@
+
+.team-name {
+    font-size: 150%;
+    font-weight: bold;
+    line-height: 220%;
+}
+
+.state-name {
+    font-size: 120%;
+    font-weight: bold;
+    line-height: 220%;
+}
+
+.score-name {
+    font-size: 150%;
+    font-weight: bold;
+    line-height: 220%;
+}
+
+.label-default {
+    background-color: #666666;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.label-blue {
+    background-color: #0000FF;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 50px;
+}
+
+.label-yellow {
+    background-color: #FFFF00;
+    color: #000000;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 50px;
+}

@@ -12,7 +12,7 @@ app.on('window-all-closed', function(){ app.quit(); });
 
 app.on('ready', function(){
   //create main window
-  main_window = new browser_window({ width: 1200, height: 800 });
+  main_window = new browser_window({ width: 1280, height: 960 });
 
   //load html
   main_window.loadURL('file://' + __dirname + '/index.html');
